@@ -1,0 +1,32 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corDeFundo;
+
+    &__container {
+        padding: 8px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        max-width: 100px;
+        width: 100%;
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            max-width: 200px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        
+        &__item {
+            margin: 5px;
+        }
+    }
+}

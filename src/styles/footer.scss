@@ -1,0 +1,19 @@
+@use 'variaveis';
+
+.footer {
+    padding: 100px 18px 18px 18px;
+    p {
+        color: variaveis.$corDeTexto;
+        text-align: center;
+        font-size: 12px;
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            font-size: 1.3em;
+        }
+    }
+
+    .nome {
+        color: variaveis.$corDeFundoBotao;
+        margin: 20px 0px;
+    }
+}

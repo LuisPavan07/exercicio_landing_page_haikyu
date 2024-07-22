@@ -1,0 +1,129 @@
+@use 'variaveis';
+
+.lista {
+    padding: 2vw 10vw;
+    min-height: 50vw;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        max-width: 100%;
+    }
+
+    &__title {
+        color: variaveis.$corDeFundoBotao;
+        font-size: 32px;
+        text-align: center;
+        padding: 80px 0 20px;
+        font-family: Dimis;
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            font-size: 3.2em;
+        }
+        
+        @media (max-width: 767px) {
+            font-size: 2em;
+        }
+    }
+
+    &__times {
+        color: variaveis.$corDeTexto;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 767px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+        }
+
+        &__button {
+            color: variaveis.$corDeTexto;
+            background: none;
+            border: none;
+            font-size: 18px;
+            margin: 0 1vw;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+
+            @media (min-width: 768px) and (max-width: 1023px) {
+                font-size: 26px;
+            }
+
+            @media (max-width: 767px) {
+                margin-bottom: 10px;
+            }
+
+            &--is--active {
+                border-color: variaveis.$corDeFundoBotao;
+            }
+        }
+    }
+
+    &__personagens {
+        margin-top: 50px;
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 32px;
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+
+        &--is--active {
+            display: grid;
+        }
+
+        &__conteudo {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+
+            @media (min-width: 768px) and (max-width: 1023px) {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                border-radius: 28px;
+                margin-bottom: 8px;
+                border: 2px solid variaveis.$corDeFundoBotao;
+
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    max-width: 320px;
+                }
+                
+                @media (max-width: 767px) {
+                    max-width: 100%;
+                }
+            }
+
+            .name {
+                color: variaveis.$corDeTexto;
+                border: 1px solid variaveis.$corDeFundoBotao;
+                border-radius: 18px;
+                padding: 2px;
+                width: 100%;
+                max-width: 200px;
+                text-align: center;
+
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    max-width: 320px;
+                    font-size: 1.6em;
+                    margin-bottom: 10px;
+                }
+                
+                @media (max-width: 767px) {
+                    max-width: 100%;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}

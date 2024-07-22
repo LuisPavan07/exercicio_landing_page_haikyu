@@ -1,0 +1,99 @@
+@use 'variaveis';
+
+.home {
+    min-height: 100vh;
+    background-image: url(../images/Prancheta\ 1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        background-image: url(../images/Prancheta\ 3.png);
+        background-position: top center;
+    }
+
+    @media (max-width: 767px) {
+        background-image: url(../images/Prancheta\ 2.png);
+        background-position: top center;
+        background-size: 120vw;
+    }
+
+    &__content {
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            max-width: 100%;
+            padding-top: 74vh;
+        }
+        
+        @media (max-width: 767px) {
+            padding-top: 55vh ;
+        }
+
+        &__branding {
+            max-width: 800px;
+
+            img {
+                width: 720px;
+                max-width: 100%;
+                padding: 0px 0px 20px 80px;
+                align-items: center;
+
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    max-width: 100%;
+                    margin-top: -10vh;
+                    padding-left: 7vw;
+                }
+
+                @media (max-width: 767px) {
+                    margin-left: 18px;
+                    padding: 0;
+                }
+            }
+        }
+
+        &__description {
+            max-width: 580px;
+
+            @media (max-width: 767px) {
+                margin-top: 6vh;
+            }
+            
+            &__title {
+                color: variaveis.$corDeFundoBotao;
+                font-size: 32px;
+                margin-bottom: 20px; 
+                text-align: center; 
+                font-family: Dimis;
+
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    font-size: 3.2em;
+                    margin-top: 4vh;
+                }
+                
+                @media (max-width: 767px) {
+                    font-size: 2em;
+                }
+            }
+
+            p {
+                color: variaveis.$corDeTexto;
+                padding: 0px 60px 0 80px;
+                font-size: 18px;
+
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    font-size: 1.5em;
+                    padding: 8px;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 0.8em;
+                    padding: 0px 14px;
+                }
+            }
+        }
+    }
+}
